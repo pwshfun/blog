@@ -1,5 +1,6 @@
 +++
-author = "Hugo Authors"
+author = "Ulises Bermejo"
+writer = "Ulises Bermejo"
 title = "Placeholder Text"
 date = "2019-03-09"
 description = "Lorem Ipsum Dolor Si Amet"

@@ -1,3 +1,10 @@
+%upcaret
+  width: 0
+  height: 0
+  border-left: 0.33rem solid transparent
+  border-right: 0.33rem solid transparent
+  top: -0.5rem
+  left: 1rem
 .nav
   color: $haze
   display: flex
@@ -5,6 +12,7 @@
   @include content
   &_active
     background-color: rgba($light, 0.05)
+    border-radius: 0.25rem
   &, &_body
   &_icon
     width: 0.7rem
@@ -25,8 +33,9 @@
     padding: 0.5rem 1rem
     display: inline-flex
     align-items: center
-
   &_sub
+    width: 100%
+    left: 0
     position: absolute
     z-index: 20
     border-radius: 0 0 0.5rem 0.5rem 
@@ -36,26 +45,63 @@
     overflow: hidden
     padding: 0.96rem 0 0
     background: transparent
-  
+
   &_parent
     position: relative
     display: flex
     align-items: center
     margin: 0.25rem 0
     border-radius: 0.5rem
-  
+
+  &_open + &_sub &_child
+    padding-top: 0.5rem
+    padding-bottom: 0.5rem
+    z-index: 3
+    & + a
+      @media screen and (min-width: $mobile-menu-breakpoint)
+        padding-top: 0
+    &:not(:first-child)
+      position: relative
+    &:first-child::before
+      position: absolute
+      content: ""
+      @extend %upcaret
+      border-bottom: 0.5rem solid var(--translucent-light)
+      z-index: 2
   &_open + &_sub
     height: initial
     z-index: 999
-    @media screen and (min-width: 769px) 
-      background-color: $bg
-      min-width: 20.5rem
-      box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.17)
+    overflow: initial
+    border-radius: 0.5rem
+    padding-bottom: 0.5rem
+    @media screen and (min-width: $mobile-menu-breakpoint)
+      color: var(--text)
+    &::before, &::after
+      content: ""
+      position: absolute
+    &::before
+      @extend %upcaret
+      z-index: 1
+      @media screen and (min-width: $mobile-menu-breakpoint)
+        border-bottom: 0.5rem solid var(--choice-bg)
+    &::after
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: var(--translucent-light)
+      border-radius: 0.5rem
+      box-shadow: 0 1rem 3rem rgba(0,0,0,0.25)
+    @media screen and (min-width: $mobile-menu-breakpoint)
+      background: var(--choice-bg)
+      width: auto
+      white-space: nowrap;
   &_open &_icon
     transform: rotate(180deg)
 
   &_sub &_item
-    position: relative
+    &:not(.nav_child)
+      position: relative
     z-index: 5
     display: block
     padding-top: 0.75rem
@@ -64,10 +110,10 @@
     margin: 0
 
   &_brand
-    img 
+    img
       max-width: 15rem
       margin: 0
-    @media screen and (min-width: 769px)
+    @media screen and (min-width: $mobile-menu-breakpoint)
       padding-left: 0
       // margin-left: -16rem
       // transform: translateX(50rem)
@@ -76,7 +122,7 @@
 
   &_center
     display: none
-    @media screen and (min-width: 769px)
+    @media screen and (min-width: $mobile-menu-breakpoint)
       display: flex
       flex: 1
       align-items: center
@@ -85,7 +131,7 @@
         flex: initial
 
   &_hide
-    @media screen and (min-width: 769px)
+    @media screen and (min-width: $mobile-menu-breakpoint)
       display: none
   &_close
     display: none
@@ -194,11 +240,21 @@
   &_share
     display: inline-flex
   &_meta
-    display: inline-flex
-    flex-flow: row wrap
-    align-items: center
+    align-items: stretch
+    &, span 
+      display: inline-flex
+      flex-flow: row wrap
+    span
+      align-items: center
+      margin-bottom: 0.5rem
+      &:last-of-type
+        @media screen and (max-width: 667px)
+          margin-top: -0.5rem
+        
     .button
-      margin-bottom: 0
+      @media screen and (min-width: 667px)
+        margin: 0 0.5rem
+
   &_date
     margin-right: 0.5rem
     margin-left: 0.25rem
@@ -366,13 +422,13 @@
   &_thumbnail
     min-height: 10rem
     display: none
-    @media screen and (min-width: 769px)
+    @media screen and (min-width: $mobile-menu-breakpoint)
       display: block 
       border-radius: 0.5rem
   &_footer
     &.partition
       display: grid
-      @media screen and (min-width: 769px) 
+      @media screen and (min-width: $mobile-menu-breakpoint) 
         grid-template-columns: 2fr 7fr
         grid-gap: 1rem
 .sidebar
@@ -388,6 +444,15 @@
       position: absolute
       left: -2rem
         // display: none
+
+.author
+  &_header
+    display: grid
+    grid-template-columns: 3rem 1fr
+    grid-gap: 1rem
+  &_bio
+    a
+      color: $theme
 
 .pagination
   display: flex
@@ -406,7 +471,17 @@
     background-color: $theme
     color: $light
     border-radius: 1rem
+  &_only
+    display: none !important
+  & &_only
+    display: initial !important
 
+.round
+  border-radius: 50%
+  max-width: 100%
+  height: auto
+  padding: 0
+  vertical-align: middle
 
 .float
   &_left
@@ -471,7 +546,7 @@
     display: grid
     align-items: center
     margin: 0 0.5rem
-    @media screen and (min-width: 769px)
+    @media screen and (min-width: $mobile-menu-breakpoint)
       margin: 0 1.5rem
       grid-template-columns: 1fr
 
@@ -531,3 +606,21 @@
     display: block
     margin-left: auto !important
     margin-right: auto !important
+
+.video
+  overflow: hidden
+  padding-bottom: 56.25%
+  position: relative
+  height: 0
+  margin: 1.5rem 0
+  border-radius: 0.6rem
+  background-color: var(--bg)
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.17)
+  iframe
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    border: none
+    position: absolute
+    transform: scale(1.02)

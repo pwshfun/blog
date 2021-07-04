@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Powershell on pwsh.Fun</title>
+    <link>https://example.com/tags/powershell/</link>
+    <description>Recent content in Powershell on pwsh.Fun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 04 Jul 2021 18:10:10 +0200</lastBuildDate><atom:link href="https://example.com/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get Palabras</title>
+      <link>https://example.com/post/get-palabras/</link>
+      <pubDate>Sun, 04 Jul 2021 18:10:10 +0200</pubDate>
+      
+      <guid>https://example.com/post/get-palabras/</guid>
+      <description>
+        
+          &lt;p&gt;Una funcion para contar las palabars de un texto.&lt;/p&gt;
+&lt;p&gt;A raiz de una conversacion se me ocurrio crear esta funcion que puede ayudar a contar palabras en un texto deterinado.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;Global:&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Get-Palabras&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#Espublico&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;&amp;lt;#
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;.SYNOPSIS&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  Cuenta palabras dentro de un fichero ejemplo de funcion privada y funcion global
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;.DESCRIPTION&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  Se obtendra el la cantidad de palabras que contiene un texto
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;.PARAMETER&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; Fichero
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;    Rutal del archivo a analizar
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;.PARAMETER&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; Repetido
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;   Por defecto no se contaran palabras repetidas
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;   Si desea obtener el total de palabras asigne  $false
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;.INPUTS&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  Archivo en texto plano
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;.OUTPUTS&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  Integer numero de palabras
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;.NOTES&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  Version:        1.1
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  Author:         Felipoyo
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  Creation Date:  13/05/2021
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  Purpose/Change: Se agrega funcionalidad de palabras repetidas.
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;.EXAMPLE&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;23&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  Get-Palabras -Fichero &amp;#34;C:\Users\XXXXX\Desktop\palabras.txt&amp;#34;  
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;24&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  Get-Palabras -Fichero &amp;#34;C:\Users\XXXXX\Desktop\demowords.txt&amp;#34;  -Repetido:$false
+&lt;/span&gt;&lt;span class=&#34;ln&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;#&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;26&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;Param&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;27&lt;/span&gt;        &lt;span class=&#34;c&#34;&gt;# Parametro: Fichero : Obligatorio, String&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;28&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Parameter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Mandatory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)]&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;29&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ValidateScript&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Test-Path&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-PathType&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Leaf&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})]&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;30&lt;/span&gt;        &lt;span class=&#34;no&#34;&gt;[string]&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;31&lt;/span&gt;        &lt;span class=&#34;nv&#34;&gt;$Fichero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;32&lt;/span&gt;        &lt;span class=&#34;c&#34;&gt;#Parametro: Repetido : Opcional, Boolean = $true&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;33&lt;/span&gt;        &lt;span class=&#34;no&#34;&gt;[bool]&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;34&lt;/span&gt;        &lt;span class=&#34;nv&#34;&gt;$Repetido&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$true&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;#valur por default&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;35&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;36&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;Private&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Find-Contenido&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#Es privada&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;37&lt;/span&gt;         &lt;span class=&#34;k&#34;&gt;Param&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;38&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Parameter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Mandatory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)]&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;39&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ValidateScript&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Test-Path&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-PathType&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Leaf&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})]&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;40&lt;/span&gt;        &lt;span class=&#34;no&#34;&gt;[string]&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;41&lt;/span&gt;        &lt;span class=&#34;nv&#34;&gt;$Ruta&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;42&lt;/span&gt; 
+&lt;span class=&#34;ln&#34;&gt;43&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;44&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;$contenido&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Get-Content&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-LiteralPath&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$Ruta&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;45&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;$contenido&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;46&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;$linea&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;47&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;$palabrasdelinea&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$linea&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;.;,&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;`r`n`0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;`t&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;48&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;$palabras&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$palabrasdelinea&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;49&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;Return&lt;/span&gt;  &lt;span class=&#34;nv&#34;&gt;$palabras&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;51&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;52&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;$palabras&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;@()&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;53&lt;/span&gt;    &lt;span class=&#34;nb&#34;&gt;Write-debug&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Contando palabras del archivo &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$Fichero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;54&lt;/span&gt;   
+&lt;span class=&#34;ln&#34;&gt;55&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;$palabras&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Find-Contenido&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Ruta&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$Fichero&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;56&lt;/span&gt; 
+&lt;span class=&#34;ln&#34;&gt;57&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$Repetido&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-eq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;58&lt;/span&gt;      
+&lt;span class=&#34;ln&#34;&gt;59&lt;/span&gt;      &lt;span class=&#34;nv&#34;&gt;$resultado&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$palabras&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Where-Object&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-ne&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;60&lt;/span&gt;    
+&lt;span class=&#34;ln&#34;&gt;61&lt;/span&gt;     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;62&lt;/span&gt;     &lt;span class=&#34;nv&#34;&gt;$resultado&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$palabras&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Where-Object&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-ne&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;select &lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Unique&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;63&lt;/span&gt;     
+&lt;span class=&#34;ln&#34;&gt;64&lt;/span&gt;     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;65&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;Return&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;[int]&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$resultado&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;66&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;67&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Write-Color</title>
+      <link>https://example.com/post/write-color/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/write-color/</guid>
+      <description>
+        
+          &lt;p&gt;Primer post de esta nueva andadura escribiendo sobre PowerShell. Compartiremos un poco de codigo y aprenderemos por el camino.&lt;/p&gt;
+&lt;p&gt;Una pequeña funciona a raiz de una conversacion en &lt;a href=&#34;https://t.me/PowershellSpanish&#34;&gt;Telegram&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Write-Color&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CmdletBinding&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()]&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;param&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Parameter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Mandatory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)]&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ValidateSet&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;RA&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;PL&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;ND&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)]&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;[string]&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$var&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;  &lt;span class=&#34;nv&#34;&gt;$colores&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;@{&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;RA&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;PL&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;darkblue&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;ND&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;  &lt;span class=&#34;nb&#34;&gt;Write-Host&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-ForegroundColor&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$colores&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$var&lt;/span&gt;
+&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
