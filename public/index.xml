@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pwsh.Fun</title>
-    <link>https://example.com/</link>
+    <link>https://pwsh.fun/</link>
     <description>Recent content on pwsh.Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 04 Jul 2021 18:10:10 +0200</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jul 2021 18:10:10 +0200</lastBuildDate><atom:link href="https://pwsh.fun/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Get Palabras</title>
-      <link>https://example.com/post/get-palabras/</link>
+      <link>https://pwsh.fun/post/get-palabras/</link>
       <pubDate>Sun, 04 Jul 2021 18:10:10 +0200</pubDate>
       
-      <guid>https://example.com/post/get-palabras/</guid>
+      <guid>https://pwsh.fun/post/get-palabras/</guid>
       <description>
         
           &lt;p&gt;Una funcion para contar las palabars de un texto.&lt;/p&gt;
@@ -92,10 +92,10 @@
     
     <item>
       <title>Write-Color</title>
-      <link>https://example.com/post/write-color/</link>
+      <link>https://pwsh.fun/post/write-color/</link>
       <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/write-color/</guid>
+      <guid>https://pwsh.fun/post/write-color/</guid>
       <description>
         
           &lt;p&gt;Primer post de esta nueva andadura escribiendo sobre PowerShell. Compartiremos un poco de codigo y aprenderemos por el camino.&lt;/p&gt;
@@ -121,10 +121,10 @@
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://example.com/post/markdown-syntax/</link>
+      <link>https://pwsh.fun/post/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/markdown-syntax/</guid>
+      <guid>https://pwsh.fun/post/markdown-syntax/</guid>
       <description>
         
           &lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
@@ -273,10 +273,10 @@
     
     <item>
       <title>Rich Content</title>
-      <link>https://example.com/post/rich-content/</link>
+      <link>https://pwsh.fun/post/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/rich-content/</guid>
+      <guid>https://pwsh.fun/post/rich-content/</guid>
       <description>
         
           &lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
@@ -364,10 +364,10 @@
     
     <item>
       <title>Placeholder Text</title>
-      <link>https://example.com/post/placeholder-text/</link>
+      <link>https://pwsh.fun/post/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/placeholder-text/</guid>
+      <guid>https://pwsh.fun/post/placeholder-text/</guid>
       <description>
         
           &lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
@@ -399,10 +399,10 @@
     
     <item>
       <title>Math Typesetting</title>
-      <link>https://example.com/post/math-typesetting/</link>
+      <link>https://pwsh.fun/post/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/math-typesetting/</guid>
+      <guid>https://pwsh.fun/post/math-typesetting/</guid>
       <description>
         
           &lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
@@ -433,10 +433,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Emoji Support</title>
-      <link>https://example.com/post/emoji-support/</link>
+      <link>https://pwsh.fun/post/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/emoji-support/</guid>
+      <guid>https://pwsh.fun/post/emoji-support/</guid>
       <description>
         
           &lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;

@@ -2,174 +2,174 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/pt/categories/</loc>
+    <loc>https://pwsh.fun/pt/categories/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.com/categories/"
+                href="https://pwsh.fun/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/categories/"
+                href="https://pwsh.fun/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://example.com/pt/categories/"
+                href="https://pwsh.fun/pt/categories/"
                 />
   </url><url>
-    <loc>https://example.com/pt/tags/css/</loc>
+    <loc>https://pwsh.fun/pt/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.com/tags/css/"
+                href="https://pwsh.fun/tags/css/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://example.com/pt/tags/css/"
+                href="https://pwsh.fun/pt/tags/css/"
                 />
   </url><url>
-    <loc>https://example.com/pt/tags/destacado/</loc>
+    <loc>https://pwsh.fun/pt/tags/destacado/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/pt/post/markdown-syntax/</loc>
+    <loc>https://pwsh.fun/pt/post/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.com/post/markdown-syntax/"
+                href="https://pwsh.fun/post/markdown-syntax/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://example.com/pt/post/markdown-syntax/"
+                href="https://pwsh.fun/pt/post/markdown-syntax/"
                 />
   </url><url>
-    <loc>https://example.com/pt/series/guia-de-temas/</loc>
+    <loc>https://pwsh.fun/pt/series/guia-de-temas/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/pt/tags/html/</loc>
+    <loc>https://pwsh.fun/pt/tags/html/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.com/tags/html/"
+                href="https://pwsh.fun/tags/html/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://example.com/pt/tags/html/"
+                href="https://pwsh.fun/pt/tags/html/"
                 />
   </url><url>
-    <loc>https://example.com/pt/tags/markdown/</loc>
+    <loc>https://pwsh.fun/pt/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.com/tags/markdown/"
+                href="https://pwsh.fun/tags/markdown/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://example.com/pt/tags/markdown/"
+                href="https://pwsh.fun/pt/tags/markdown/"
                 />
   </url><url>
-    <loc>https://example.com/pt/</loc>
+    <loc>https://pwsh.fun/pt/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.com/"
+                href="https://pwsh.fun/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/"
+                href="https://pwsh.fun/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://example.com/pt/"
+                href="https://pwsh.fun/pt/"
                 />
   </url><url>
-    <loc>https://example.com/pt/post/</loc>
+    <loc>https://pwsh.fun/pt/post/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.com/post/"
+                href="https://pwsh.fun/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/post/"
+                href="https://pwsh.fun/en/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://example.com/pt/post/"
+                href="https://pwsh.fun/pt/post/"
                 />
   </url><url>
-    <loc>https://example.com/pt/series/</loc>
+    <loc>https://pwsh.fun/pt/series/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.com/series/"
+                href="https://pwsh.fun/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/series/"
+                href="https://pwsh.fun/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://example.com/pt/series/"
+                href="https://pwsh.fun/pt/series/"
                 />
   </url><url>
-    <loc>https://example.com/pt/categories/sintaxe/</loc>
+    <loc>https://pwsh.fun/pt/categories/sintaxe/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/pt/tags/</loc>
+    <loc>https://pwsh.fun/pt/tags/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.com/tags/"
+                href="https://pwsh.fun/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/tags/"
+                href="https://pwsh.fun/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://example.com/pt/tags/"
+                href="https://pwsh.fun/pt/tags/"
                 />
   </url><url>
-    <loc>https://example.com/pt/tags/temas/</loc>
+    <loc>https://pwsh.fun/pt/tags/temas/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/pt/categories/temas/</loc>
+    <loc>https://pwsh.fun/pt/categories/temas/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/pt/about/</loc>
+    <loc>https://pwsh.fun/pt/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.com/about/"
+                href="https://pwsh.fun/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://example.com/pt/about/"
+                href="https://pwsh.fun/pt/about/"
                 />
   </url>
 </urlset>

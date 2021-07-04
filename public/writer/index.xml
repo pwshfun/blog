@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writers on pwsh.Fun</title>
-    <link>https://example.com/writer/</link>
+    <link>https://pwsh.fun/writer/</link>
     <description>Recent content in Writers on pwsh.Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright><atom:link href="https://example.com/writer/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright><atom:link href="https://pwsh.fun/writer/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

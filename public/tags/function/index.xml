@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Function on pwsh.Fun</title>
-    <link>https://example.com/tags/function/</link>
+    <link>https://pwsh.fun/tags/function/</link>
     <description>Recent content in Function on pwsh.Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 04 Jul 2021 18:10:10 +0200</lastBuildDate><atom:link href="https://example.com/tags/function/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jul 2021 18:10:10 +0200</lastBuildDate><atom:link href="https://pwsh.fun/tags/function/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Get Palabras</title>
-      <link>https://example.com/post/get-palabras/</link>
+      <link>https://pwsh.fun/post/get-palabras/</link>
       <pubDate>Sun, 04 Jul 2021 18:10:10 +0200</pubDate>
       
-      <guid>https://example.com/post/get-palabras/</guid>
+      <guid>https://pwsh.fun/post/get-palabras/</guid>
       <description>
         
           &lt;p&gt;Una funcion para contar las palabars de un texto.&lt;/p&gt;

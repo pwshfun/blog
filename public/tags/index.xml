@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on pwsh.Fun</title>
-    <link>https://example.com/tags/</link>
+    <link>https://pwsh.fun/tags/</link>
     <description>Recent content in Tags on pwsh.Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 04 Jul 2021 18:10:10 +0200</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jul 2021 18:10:10 +0200</lastBuildDate><atom:link href="https://pwsh.fun/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

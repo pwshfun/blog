@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Funcion on pwsh.Fun</title>
-    <link>https://example.com/tags/funcion/</link>
+    <link>https://pwsh.fun/tags/funcion/</link>
     <description>Recent content in Funcion on pwsh.Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 02 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/funcion/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://pwsh.fun/tags/funcion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Write-Color</title>
-      <link>https://example.com/post/write-color/</link>
+      <link>https://pwsh.fun/post/write-color/</link>
       <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/write-color/</guid>
+      <guid>https://pwsh.fun/post/write-color/</guid>
       <description>
         
           &lt;p&gt;Primer post de esta nueva andadura escribiendo sobre PowerShell. Compartiremos un poco de codigo y aprenderemos por el camino.&lt;/p&gt;
